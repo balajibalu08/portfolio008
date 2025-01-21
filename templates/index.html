@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Index - Folio Bootstrap Template</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+      
+        <!-- Favicons -->
+        <link href="{{url_for('static', filename='img/bt logo.png')}}" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='font/bootstrap-icons.css') }}">
+        <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+      </head>
+      <body>
+        <header id="header" class="header fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url_for('index') }}">Balaji Tadisetty</a>
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#education">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="hero">
+                <div class="hero-content">
+                    <h1 class="typing-text">Aspiring AI Engineer</h1>
+                    <p class="hero-text">Welcome to my portfolio.</p>
+                    <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+                    <div class="social-links mt-3">
+                        <a href="{{social_links['twitter']}}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="{{social_links['linkedin']}}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="{{social_links['insta']}}" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <!-- About Section -->
+    <section id="about" class="about section">
+        <!--Start About Section-->
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <div class="row gy-4 justify-content-between bg-white p-4 rounded shadow"> 
+                    <div class="col-lg-4 profile-img">
+                        <img src="{{ url_for('static', filename='img/BJ-275.jpg') }}" class="img-fluid rounded" alt="Profile Picture">
+                    </div>
+                    <div class="col-lg-8"> 
+                        <h2 class="side-heading-3d">
+                            {% for letter in "About Me" %}
+                            <span>{{ letter }}</span>
+                            {% endfor %}
+                        </h2>                        <p>Currently pursuing a Master of Computer Applications (MCA) degree with a focus on Artificial Intelligence at KL University (2023-2025), I am developing a strong foundation in machine learning, software development, and AI principles. My coursework emphasizes practical application and includes focused study in data analysis and data preprocessing. I am particularly interested in leveraging AI to create impactful solutions in areas like data management and system optimization. I am eager to apply my growing skillset in a professional setting and contribute to innovative projects.</p>
+        
+                        <h3 class="side-heading">Interests and Hobbies</h3>
+                        <ul class="list-unstyled">
+                            <li><strong>Avid Reader:</strong> I am passionate about exploring diverse genres of books, from fiction to self-development, constantly seeking new knowledge and perspectives.</li>
+                            <li><strong>Film and Television:</strong> I appreciate the immersive experience of cinematic storytelling and character-driven narratives.</li>
+                            <li><strong>Creative Writing:</strong> I enjoy crafting stories that resonate with emotions and imagination.</li>
+                            <li><strong>Music Appreciation:</strong> I find listening to various genres of music to be a source of relaxation and inspiration.</li>
+                        </ul>
+        
+                        <h3 class="side-heading">Skills</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><strong>Programming Languages:</strong> Python, C, PHP</li>
+                                    <li><strong>Machine Learning:</strong> Machine Learning Algorithms (including Supervised Learning, Regression, Multinomial Naive Bayes), Data Preprocessing, Data Analysis</li>
+                                    <li><strong>Web Development:</strong> HTML, CSS, Flask</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><strong>Data Management:</strong> SQL, CSV Data Handling, Data Integration</li>
+                                    <li><strong>Other:</strong> Excel, Tkinter, Socket Programming, Documentation, Error Handling</li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <h3 class="side-heading">Languages</h3>
+                        <ul class="list-unstyled">
+                            <li>Telugu (Native)</li>
+                            <li>Hindi (Proficient)</li>
+                            <li>English (Fluent)</li>
+                            <li>Tamil (Basic)</li>
+                        </ul>
+        
+                        <h3 class="side-heading">Recognitions and Achievements</h3>
+                        <ul class="list-unstyled">
+                            <li><strong>Monologue Performance:</strong> 3rd Prize for performance as Puck in William Shakespeare's *A Midsummer Night's Dream* (Undergraduate).</li>
+                            <li><strong>Short Story Writing:</strong> 1st Prize for "Insomnia" in a short story writing competition (Undergraduate).</li>
+                            <li><strong>Poetry Writing:</strong> 3rd Prize in a poetry writing competition (Women's Day celebration, Undergraduate).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--education section-->
+        <section id="education" class="py-5">
+            <div class="container">
+                <h2 class="side-heading-3d">
+                    {% for letter in "Education" %}
+                    <span>{{ letter }}</span>
+                    {% endfor %}
+                </h2>                <div class="timeline">
+                    {% for education in educations %}
+                    <div class="timeline-item">
+                        <div class="timeline-date">{{ education.date }}</div>
+                        <div class="timeline-content">
+                            <h3>{{ education.degree }}</h3>
+                            <p>{{ education.institution }}</p>
+                            {% if education.description %}
+                            <p>{{ education.description }}</p>
+                            {% endif %}
+                            <p class="cgpa">CGPA: {{ education.cgpa }}</p> 
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>  
+        <section id="projects" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="side-heading-3d">Projects</h2>
+                <div class="row gy-4">
+                    {% for project in projects %}
+                    <div class="col-md-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="{{ url_for('static', filename='img/' + project.image) }}" alt="{{ project.title }}" class="img-fluid">
+                                <div class="project-overlay">
+                                    <div class="overlay-content">
+                                        <h3>{{ project.title }}</h3>
+                                        <p>{{ project.short_description or project.description[:100] + "..." }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="py-5">
+            <div class="container">
+                <h2 class="side-heading-3d">
+                    {% for letter in "Experience" %}
+                    <span>{{ letter }}</span>
+                    {% endfor %}
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">MAY 2024- JULY 2024</div>
+                        <div class="timeline-content">
+                            <h3>Intern Data Science, Machine Learning, and Artificial Intelligence</h3>
+                            <p>Brain O Vision</p>
+                            <p>As an intern, I worked on developing a disease prediction system using the Multinomial Naive Bayes algorithm to analyze user-reported symptoms and predict potential health conditions. I processed and cleaned large datasets to improve model accuracy, trained and fine-tuned the algorithm, and integrated the system with Flask for seamless deployment. Additionally, I documented the technical aspects of the project to ensure clear knowledge transfer for future development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="side-heading-3d">
+                    {% for letter in "Contact Me" %}
+                    <span>{{ letter }}</span>
+                    {% endfor %}
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="card p-4 shadow">
+                            <form method="post">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Your Message" name="message" required></textarea>
+                                </div>
+                                <div class="d-grid"> 
+                                    <button type="submit" class="btn btn-primary btn-lg py-3 w-100">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="py-4 bg-dark text-white mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#hero" class="text-white">Home</a></li>
+                            <li><a href="#experience" class="text-white">Experience</a></li>
+                            <li><a href="#projects" class="text-white">Projects</a></li>
+                            <li><a href="#contact" class="text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Information</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-phone"></i> +91 6305090668</li>
+                            <li><i class="bi bi-envelope"></i> balajibalu088@gmail.com</li>
+                            <li><i class="bi bi-geo-alt"></i> 9-42-107, K.T street, Vijayawada</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Follow Me</h5>
+                        <div class="social-links">
+                            <a href="{{social_links['linkedin']}}" class="text-white me-2" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="{{social_links['twitter']}}" class="text-white me-2" target="_blank"><i class="bi bi-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center mt-2">&copy; 2024 Balaji Tadisetty. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>
