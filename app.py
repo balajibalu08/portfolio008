@@ -42,7 +42,7 @@ def index():
         ]
     projects = [
         {'title': 'Disease Prediction', 'image': 'disease.png','description': 'Developed an innovative application leveraging advanced algorithms trained on extensive medical datasets, achieving 91% accuracy in providing preliminary diagnostic suggestions. Enhanced healthcare accessibility by delivering actionable insights for early disease detection and promoting prompt medical consultations. Additionally, created comprehensive technical and functional documentation to ensure the application\'s scalability and ease of use.'},
-        {'title': 'Bi-Directional CSV-SQL Converter', 'image': 'csvtosql.png', 'description': 'Developed a robust application for bi-directional conversion between CSV files and SQL tables, enabling seamless data transfer and integration. Optimized the system to handle large datasets, including processing CSV files up to 2GB, ensuring scalability and efficiency. Automated data validation and error handling to maintain data integrity during conversions, streamlining workflows for diverse data management needs.'},
+        {'title': 'Bi-Directional CSV-SQL Converter', 'image': 'import.png', 'description': 'Developed a robust application for bi-directional conversion between CSV files and SQL tables, enabling seamless data transfer and integration. Optimized the system to handle large datasets, including processing CSV files up to 2GB, ensuring scalability and efficiency. Automated data validation and error handling to maintain data integrity during conversions, streamlining workflows for diverse data management needs.'},
         {'title': 'File Sharing', 'image': 'filesharing.jpeg','description': 'Developed a secure file-sharing platform using Tkinter and Socket programming, allowing users to upload, store, and share files efficiently. The platform features file organization into folders, customizable sharing permissions, and the generation of secure links for accessing files. It supports file versioning, large file uploads, and previews for common file types, enhancing the overall user experience. Additionally, real-time notifications and usage analytics were integrated to foster improved collaboration and usability. I focused on ensuring robust data security and optimized performance, making the system capable of handling diverse user needs effectively.'}
     ]
     experience = [
@@ -91,4 +91,4 @@ def index():
     return render_template('index.html',social_links=social_links, educations=educations,projects=projects,experience=experience)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False,port=1000,host="0.0.0.0")
