@@ -68,7 +68,7 @@ def index():
 
             # Send email
             sender_email = "balajibalu088@gmail.com"
-            sender_password = "iahs gzks upma uhxw" 
+            sender_password = "ekfs kmum xtpz fqam" 
             receiver_email = "2301600019mca@gmail.com" # Recipient email (your email)
             email_message = f"Name: {name}\nEmail: {email}\nMessage: {message}"
 
@@ -91,4 +91,5 @@ def index():
     return render_template('index.html',social_links=social_links, educations=educations,projects=projects,experience=experience)
 
 if __name__ == "__main__":
+
     app.run(debug=False,port=1000,host="0.0.0.0")
